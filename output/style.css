@@ -1,0 +1,121 @@
+*{
+   margin: 0;
+   padding:0;
+}
+
+/* h1 style */
+ h1 {
+    padding: 5px;
+     border: 10px 5px ;
+     margin: 20px 0px 50px 0px;
+     text-align: center;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     background-color: brown;
+     color: black;
+     font-size: 40px;
+ } 
+ /* body style */
+  body {
+     overflow-x: hidden;
+     
+   } 
+    
+ /* row style */
+  .row{
+     content: 10px 10px;
+     padding-bottom: 5px;
+     border: 5px 5px 5px 5px;
+     margin:1px;
+     padding-left: 70px;
+     padding-right: 70px;
+     color: blue;
+    
+ } 
+
+ h3{
+    font: 400;
+    
+ }
+ /* form row style */
+  .form-row{
+    padding-left:25px;
+    padding-top: 10px;
+    color: white;
+    font-style: italic;
+    font-weight: bolder;
+ } 
+ /* sorm group style */
+ 
+  
+ 
+ /* jumbotron style */
+  .jumbotron-ch{
+     background-color: black;
+     font-size: 15px;
+     border-radius: .3rem;
+     color: white;
+     padding-left: 10px;
+ } 
+ /* image style */
+ 
+ /* footer style */
+  footer {
+     padding-bottom: 5px;
+     font-size: 20px;
+     position: fixed;
+     left: 0px;
+     bottom: 0;
+     width: 100%;
+     background-color: black;
+     color: red;
+     text-align: center; 
+     
+ }
+ .card {
+    margin-right: 30px;
+    width: 400px;
+    height: 300px;
+ }
+ .card-title{
+    font-weight: bold;
+    text-align: center;
+    
+ }
+ 
+ /* body style */
+  body{
+     background-image: url(./images/matteo-vistocco-Dph00R2SwFo-unsplash.jpg);
+ } 
+ /* invalidCheck style */
+  #invalidCheck{
+ 
+ color: white;
+ } 
+ 
+ @media only screen and (max-width: 600px) {
+   .card {
+      margin-right: 30px;
+      width: 600px;
+      height:  600px;
+   }
+ }
+ 
+ 
+
+
+   
+
+
+/* sorm group style */
+.form-group{
+    padding-top: 10px;
+    padding-left: 30px;
+}
+ 
+
+
+
+
+
+
+
