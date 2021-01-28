@@ -57,14 +57,6 @@ function getTeam() {
                   type: 'input',
                   name: 'ManagerEmail',
                   message: "what is the manager's email address?",
-                  validate: answer =>{
-                    if(answer !==""){
-                      return true;
-                      
-                    } else{
-                      return "Please character can not be empty!!"
-                    }
-                  }
                 },
                 {
                   type: 'input',
@@ -107,7 +99,6 @@ function getTeam() {
                   type: 'input',
                   name: 'EngineerEmail',
                   message: "what is engineer's email address?",
-                  
                 },
                 {
                   type: 'input',
