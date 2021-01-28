@@ -2,6 +2,11 @@
    margin: 0;
    padding:0;
 }
+/* body style */
+body {
+   overflow-x: hidden;
+   
+ } 
 
 /* h1 style */
  h1 {
@@ -14,11 +19,7 @@
      color: black;
      font-size: 40px;
  } 
- /* body style */
-  body {
-     overflow-x: hidden;
-     
-   } 
+ 
     
  /* row style */
   .row{
@@ -28,27 +29,19 @@
      margin:1px;
      padding-left: 70px;
      padding-right: 70px;
-     color: blue;
+     color: black;
     
  } 
+
+/* h3 */
 
  h3{
     font: 400;
     
  }
- /* form row style */
-  .form-row{
-    padding-left:25px;
-    padding-top: 10px;
-    color: white;
-    font-style: italic;
-    font-weight: bolder;
- } 
- /* sorm group style */
- 
   
- 
  /* jumbotron style */
+
   .jumbotron-ch{
      background-color: black;
      font-size: 15px;
@@ -56,9 +49,10 @@
      color: white;
      padding-left: 10px;
  } 
- /* image style */
+ 
  
  /* footer style */
+
   footer {
      padding-bottom: 5px;
      font-size: 20px;
@@ -71,11 +65,17 @@
      text-align: center; 
      
  }
+
+ /* card style */
+
  .card {
     margin-right: 30px;
     width: 400px;
     height: 300px;
  }
+
+ /* card-title style */
+
  .card-title{
     font-weight: bold;
     text-align: center;
@@ -83,35 +83,28 @@
  }
  
  /* body style */
+
   body{
      background-image: url(./images/matteo-vistocco-Dph00R2SwFo-unsplash.jpg);
  } 
- /* invalidCheck style */
-  #invalidCheck{
  
- color: white;
- } 
  
- @media only screen and (max-width: 600px) {
-   .card {
-      margin-right: 30px;
-      width: 600px;
-      height:  600px;
+ 
+ /* Media screen style */
+ @media screen and (max-width: 770px) {
+   .card employee-card {
+     float: none;
+      flex-direction: column;
+     width: 100%;
+     height: 100%;
    }
  }
- 
- 
 
 
    
 
 
-/* sorm group style */
-.form-group{
-    padding-top: 10px;
-    padding-left: 30px;
-}
- 
+
 
 
 

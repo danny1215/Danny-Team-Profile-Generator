@@ -23,10 +23,9 @@ function getTeam() {
         choices: ["Yes", "No"]
       }
     ])
-      .then( async data => {
+    .then( async data => {
         if (data.newEmployeePrompt === "Yes") {
           await inquirer.prompt([
-
             {
               type: "list",
               name: 'employeeRole',
@@ -38,32 +37,46 @@ function getTeam() {
               await inquirer.prompt([
                 {
                   type: 'input',
-                  name: 'managerName',
+                  name: 'ManagerName',
                   message: "what is the manager's name?",
+                  validate: answer =>{
+                    if(answer !==""){
+                      return true;
+                      
+                    } else{
+                      return "Please character can not be empty!!"
+                    }
+                  }
                 },
                 {
                   type: 'input',
-                  name: 'managerId',
+                  name: 'ManagerId',
                   message: "what is the manager's Id?",
                 },
                 {
                   type: 'input',
-                  name: 'managerEmail',
+                  name: 'ManagerEmail',
                   message: "what is the manager's email address?",
+                  validate: answer =>{
+                    if(answer !==""){
+                      return true;
+                      
+                    } else{
+                      return "Please character can not be empty!!"
+                    }
+                  }
                 },
                 {
                   type: 'input',
-                  name: 'managerOfficeNumber',
+                  name: 'ManagerOfficeNumber',
                   message: "what is manager's office number?"
                 }
-
-
               ]).then(data => {
                 const manager = new Manager(
-                  data.managerName,
-                  data.managerId,
-                  data.managerEmail,
-                  data.managerOfficeNumber
+                  data.ManagerName,
+                  data.ManagerId,
+                  data.ManagerEmail,
+                  data.ManagerOfficeNumber
                 );
                 employees.push(manager);
                 addEmployee();
@@ -76,6 +89,14 @@ function getTeam() {
                   type: 'input',
                   name: 'EngineerName',
                   message: "what is Engineer's name?",
+                  validate: answer =>{
+                    if(answer !==""){
+                      return true;
+                      
+                    } else{
+                      return "Please character can not be empty!!"
+                    }
+                  }
                 },
                 {
                   type: 'input',
@@ -86,6 +107,7 @@ function getTeam() {
                   type: 'input',
                   name: 'EngineerEmail',
                   message: "what is engineer's email address?",
+                  
                 },
                 {
                   type: 'input',
@@ -110,6 +132,14 @@ function getTeam() {
                   type: 'input',
                   name: 'InternName',
                   message: "what is Intern's name?",
+                  validate: answer =>{
+                    if(answer !==""){
+                      return true;
+                      
+                    } else{
+                      return "Please character can not be empty!!"
+                    }
+                  }
                 },
                 {
                   type: 'input',
@@ -120,11 +150,20 @@ function getTeam() {
                   type: 'input',
                   name: 'InternEmail',
                   message: "what is Intern's email address?",
+                  
                 },
                 {
                   type: 'input',
                   name: 'InternSchool',
-                  message: "what is Intern's school?"
+                  message: "what is Intern's school?",
+                  validate: answer =>{
+                    if(answer !==""){
+                      return true;
+                      
+                    } else{
+                      return "Please character can not be empty!!"
+                    }
+                  }
                 }
 
 
@@ -144,18 +183,19 @@ function getTeam() {
          } else if (data.newEmployeePrompt === "No") {
 
                await makeTeam();
-            }
-          })
-        }
-        addEmployee();
+          }
+      })
+    }
+  addEmployee();
 
-      };
-      getTeam()
+};
+ getTeam()
    
       
-      function makeTeam() {
-        fs.writeFileSync(outputPath, render(employees), "utf-8");
+function makeTeam() {
+  fs.writeFileSync(outputPath, render(employees), "utf-8")
+  
       
       
-    }
+};
     
